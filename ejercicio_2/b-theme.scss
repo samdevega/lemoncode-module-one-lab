@@ -1,0 +1,23 @@
+body {
+  $base-color: #0000ff;
+  [theme="b-theme"].container {
+    .main-text, .secondary-text {
+      font-family: Times, "Times New Roman";
+    }
+    .box {
+      border-radius: 6px;
+      &.base {
+        background-color: $base-color;
+      }
+      &.important {
+        background-color: darken($base-color, 30);
+      }
+      &.warning {
+        background-color: adjust-hue(lighten($base-color, 30), -60%);
+      }
+      &.shadowed {
+        box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.8); 
+      }
+    }
+  }
+}

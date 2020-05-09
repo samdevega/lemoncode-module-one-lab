@@ -1,0 +1,22 @@
+body {
+  $base-color: #4caf50;
+  $color-variations: 1, 2, 3, 4;
+  $text-color: #888888;
+  [theme="green"].container {
+    .box {
+      &.base {
+        background-color: $base-color;
+      }
+      @each $variation in $color-variations {
+        &.darken-#{$variation} {
+          background-color: darken($base-color, $variation * 5);
+          color: lighten($text-color, $variation * 10);
+        }
+        &.lighten-#{$variation} {
+          background-color: lighten($base-color, $variation * 5);
+          color: darken($text-color, $variation * 10);
+        }
+      }
+    }
+  }
+}

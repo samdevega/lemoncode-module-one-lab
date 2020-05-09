@@ -1,0 +1,54 @@
+body {
+  $menu-color: #006a7b;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  header {
+    position: fixed;
+    width: 100%;
+    .brand {
+      font-size: 1.5rem;
+      padding: 15px 0;
+    }
+    nav {
+      width: 100%;
+      ul {
+        background-color: $menu-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          a {
+            color: #ffffff;
+            display: block;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            &:active, &:focus, &:hover {
+              background-color: darken($menu-color, 15);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    header {
+      nav {
+        ul {
+          flex-direction: row;
+          li {
+            a {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

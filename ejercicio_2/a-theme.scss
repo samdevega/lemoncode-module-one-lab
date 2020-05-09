@@ -1,0 +1,25 @@
+body {
+  $base-color: #fe0000;
+  [theme="a-theme"].container {
+    .main-text {
+      font-family: "Arial";
+    }
+    .secondary-text {
+      font-family: "FreeSans";
+    }
+    .box {
+      &.base {
+        background-color: $base-color;
+      }
+      &.important {
+        background-color: darken($base-color, 30);
+      }
+      &.warning {
+        background-color: lighten($base-color, 30);
+      }
+      &.shadowed {
+        box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.8); 
+      }
+    }
+  }
+}
